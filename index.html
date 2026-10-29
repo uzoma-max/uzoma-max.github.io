@@ -8,9 +8,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav">
     <a href="#top" class="logo">CU</a>
     <div class="nav-links">
+      <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -19,114 +22,174 @@
   </nav>
 
   <header class="hero" id="top">
-    <p class="eyebrow">Product Manager · Fintech · Abuja, Nigeria</p>
-    <h1>Hi, I'm Chukwunonso Uzoma.</h1>
-    <p class="lead">
-      I build digital financial products, from requirements through delivery. At Visual ICT I manage
-      Tagpay Business, a Banking-as-a-Service platform, and I'm hands-on with JavaScript, SQL and API documentation.
-    </p>
-    <div class="hero-actions">
-      <a class="button" href="#projects">See my projects</a>
-      <a class="button ghost" href="mailto:nonsouzoma434@gmail.com">Email me</a>
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="blob blob-3" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Product Manager · Fintech · Abuja, Nigeria</p>
+        <h1>Hi, I'm <span class="gradient-text">Chukwunonso Uzoma</span>.</h1>
+        <p class="typing">I <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="lead">
+          I build digital financial products, from requirements through delivery. At Visual ICT I manage
+          Tagpay Business, a Banking-as-a-Service platform, and I'm hands-on with JavaScript, SQL and API documentation.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#projects">See my projects</a>
+          <a class="button ghost" href="mailto:nonsouzoma434@gmail.com">Email me</a>
+        </div>
+      </div>
+
+      <div class="avatar-wrap" aria-hidden="true">
+        <div class="avatar-ring"></div>
+        <div class="avatar">CU</div>
+      </div>
     </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I turn business needs into precise specs and acceptance criteria, run Agile/Scrum delivery in Linear and ClickUp,
-        and coordinate engineering, compliance and business teams. I also write developer-facing API documentation and
-        build front-end features in JavaScript.
-      </p>
-      <p>
-        Field work with agents has given me first-hand insight into how people in Nigeria adopt mobile money and payments,
-        and I'm trained in AML/CFT/CPF compliance.
-      </p>
+    <section id="about" class="reveal">
+      <h2><span class="num">01</span> About</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I turn business needs into precise specs and acceptance criteria, run Agile/Scrum delivery in Linear and ClickUp,
+            and coordinate engineering, compliance and business teams. I also write developer-facing API documentation and
+            build front-end features in JavaScript.
+          </p>
+          <p>
+            Field work with agents has given me first-hand insight into how people in Nigeria adopt mobile money and payments,
+            and I'm trained in AML/CFT/CPF compliance.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong data-count="2" data-suffix="+">0</strong><span>years in product</span></div>
+          <div class="stat"><strong data-count="25" data-suffix="%">0</strong><span>engagement lift from a feature I led</span></div>
+          <div class="stat"><strong data-count="4">0</strong><span>projects on GitHub</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects" class="reveal">
+      <h2><span class="num">02</span> Projects</h2>
       <div class="projects">
         <article class="project">
-          <div class="project-tag">JavaScript · API</div>
-          <h3>Max-i-movie Lookup</h3>
-          <p>Search any film or series and see its poster, IMDb rating, plot and cast, using the OMDb API.</p>
-          <div class="project-links">
-            <a href="https://uzoma-max.github.io/Movie-Lookup/">Live site</a>
-            <a href="https://github.com/uzoma-max/Movie-Lookup">Code</a>
+          <a class="project-image" href="https://uzoma-max.github.io/Movie-Lookup/">
+            <img src="images/movie-lookup.svg" alt="Illustration of the Max-i-movie Lookup app with movie posters">
+          </a>
+          <div class="project-body">
+            <div class="project-tag">JavaScript · API</div>
+            <h3>Max-i-movie Lookup</h3>
+            <p>Search any film or series and see its poster, IMDb rating, plot and cast, using the OMDb API.</p>
+            <div class="project-links">
+              <a href="https://uzoma-max.github.io/Movie-Lookup/">Live site →</a>
+              <a href="https://github.com/uzoma-max/Movie-Lookup">Code</a>
+            </div>
           </div>
         </article>
 
         <article class="project">
-          <div class="project-tag">JavaScript · Game</div>
-          <h3>Tic-Tac-Toe</h3>
-          <p>A browser game for two players or against a computer opponent that uses the minimax algorithm, so it never loses.</p>
-          <div class="project-links">
-            <a href="https://uzoma-max.github.io/Tic-Tac-Toe/">Play it</a>
-            <a href="https://github.com/uzoma-max/Tic-Tac-Toe">Code</a>
+          <a class="project-image" href="https://uzoma-max.github.io/Tic-Tac-Toe/">
+            <img src="images/tic-tac-toe.svg" alt="Illustration of a Tic-Tac-Toe board with a winning line">
+          </a>
+          <div class="project-body">
+            <div class="project-tag">JavaScript · Game</div>
+            <h3>Tic-Tac-Toe</h3>
+            <p>A browser game for two players or against a computer opponent that uses the minimax algorithm, so it never loses.</p>
+            <div class="project-links">
+              <a href="https://uzoma-max.github.io/Tic-Tac-Toe/">Play it →</a>
+              <a href="https://github.com/uzoma-max/Tic-Tac-Toe">Code</a>
+            </div>
           </div>
         </article>
 
         <article class="project">
-          <div class="project-tag">Web · Company site</div>
-          <h3>Visual Web</h3>
-          <p>The company website for Visual ICT, presenting information about the company and its services.</p>
-          <div class="project-links">
-            <a href="https://github.com/uzoma-max/visual-web">Code</a>
+          <a class="project-image" href="https://github.com/uzoma-max/visual-web">
+            <img src="images/visual-web.svg" alt="Illustration of a company website layout">
+          </a>
+          <div class="project-body">
+            <div class="project-tag">Web · Company site</div>
+            <h3>Visual Web</h3>
+            <p>The company website for Visual ICT, presenting information about the company and its services.</p>
+            <div class="project-links">
+              <a href="https://github.com/uzoma-max/visual-web">Code →</a>
+            </div>
           </div>
         </article>
 
         <article class="project">
-          <div class="project-tag">Product concept</div>
-          <h3>AI Study-Planning App</h3>
-          <p>Researched student planning problems and designed an AI study-planner concept with user personas and prioritized features, in a simulated Agile product cycle.</p>
+          <div class="project-image">
+            <img src="images/study-planner.svg" alt="Illustration of a study checklist with an AI sparkle">
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Product concept</div>
+            <h3>AI Study-Planning App</h3>
+            <p>Researched student planning problems and designed an AI study-planner concept with user personas and prioritized features, in a simulated Agile product cycle.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="job">
-        <div class="job-head">
-          <h3>Product Manager · Visual ICT</h3>
-          <span>Sep 2024 – Present · Abuja</span>
+    <section id="experience" class="reveal">
+      <h2><span class="num">03</span> Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="job-head">
+            <h3>Product Manager · Visual ICT</h3>
+            <span>Sep 2024 – Present · Abuja</span>
+          </div>
+          <ul>
+            <li>Manage end-to-end development of <strong>Tagpay Business</strong>, a Banking-as-a-Service platform that lets businesses offer banking and payment services.</li>
+            <li>Led a TagPay mobile app feature that <strong>increased user engagement by 25%</strong>.</li>
+            <li>Translate business and partner requirements into product specs, user stories and acceptance criteria.</li>
+            <li>Write and maintain developer-facing API documentation so partners can integrate quickly.</li>
+            <li>Plan sprints and track delivery in Linear and ClickUp; own the product roadmap.</li>
+            <li>Build and refine user-interface features for TagPay products in JavaScript.</li>
+            <li>Support agents in the field to drive adoption of mobile money and payments.</li>
+          </ul>
         </div>
-        <ul>
-          <li>Manage end-to-end development of <strong>Tagpay Business</strong>, a Banking-as-a-Service platform that lets businesses offer banking and payment services.</li>
-          <li>Led a TagPay mobile app feature that <strong>increased user engagement by 25%</strong>.</li>
-          <li>Translate business and partner requirements into product specs, user stories and acceptance criteria.</li>
-          <li>Write and maintain developer-facing API documentation so partners can integrate quickly.</li>
-          <li>Plan sprints and track delivery in Linear and ClickUp; own the product roadmap.</li>
-          <li>Build and refine user-interface features for TagPay products in JavaScript.</li>
-          <li>Support agents in the field to drive adoption of mobile money and payments.</li>
-        </ul>
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="job-head">
+            <h3>B.Eng, Polymer and Textile Engineering</h3>
+            <span>Graduated 2024 · FUTO, Owerri</span>
+          </div>
+          <p>Federal University of Technology Owerri.</p>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="skills" class="reveal">
+      <h2><span class="num">04</span> Skills</h2>
       <div class="skills">
-        <div>
+        <div class="skill-group">
+          <div class="skill-icon" aria-hidden="true">🧭</div>
           <h3>Product</h3>
           <ul class="chips">
             <li>Product life-cycle</li><li>User stories &amp; acceptance criteria</li><li>Roadmapping</li>
             <li>User research</li><li>Stakeholder management</li>
           </ul>
         </div>
-        <div>
+        <div class="skill-group">
+          <div class="skill-icon" aria-hidden="true">💳</div>
           <h3>Fintech</h3>
           <ul class="chips">
             <li>Banking-as-a-Service</li><li>Payments &amp; mobile money</li><li>Agent networks</li><li>AML / CFT / CPF</li>
           </ul>
         </div>
-        <div>
+        <div class="skill-group">
+          <div class="skill-icon" aria-hidden="true">💻</div>
           <h3>Technical</h3>
           <ul class="chips">
             <li>JavaScript</li><li>SQL</li><li>C++</li><li>Python (basic)</li><li>API documentation</li><li>Front-end</li>
           </ul>
         </div>
-        <div>
+        <div class="skill-group">
+          <div class="skill-icon" aria-hidden="true">🛠️</div>
           <h3>Tools</h3>
           <ul class="chips">
             <li>Agile / Scrum</li><li>Linear</li><li>ClickUp</li><li>Slack</li><li>GitHub</li><li>Microsoft Office</li>
@@ -135,17 +198,30 @@
       </div>
     </section>
 
-    <section id="education">
-      <h2>Education &amp; certifications</h2>
-      <ul class="plain">
-        <li><strong>B.Eng, Polymer and Textile Engineering</strong>, Federal University of Technology Owerri (FUTO), 2024</li>
-        <li><strong>Foundations of Cybersecurity</strong>, Coursera, 2025 · <a href="https://coursera.org/share/7d64216310ec7adda9da4efa3651028d">certificate</a></li>
-        <li>In-house certifications: AML/CFT/CPF, Project Management, Control of Management System Documentation</li>
-      </ul>
+    <section id="certifications" class="reveal">
+      <h2><span class="num">05</span> Certifications</h2>
+      <div class="certs">
+        <div class="cert">
+          <span class="cert-icon" aria-hidden="true">🔐</span>
+          <div><strong>Foundations of Cybersecurity</strong><span>Coursera · 2025 · <a href="https://coursera.org/share/7d64216310ec7adda9da4efa3651028d">view certificate</a></span></div>
+        </div>
+        <div class="cert">
+          <span class="cert-icon" aria-hidden="true">🛡️</span>
+          <div><strong>AML / CFT / CPF</strong><span>In-house certification</span></div>
+        </div>
+        <div class="cert">
+          <span class="cert-icon" aria-hidden="true">📋</span>
+          <div><strong>Project Management</strong><span>In-house certification</span></div>
+        </div>
+        <div class="cert">
+          <span class="cert-icon" aria-hidden="true">📁</span>
+          <div><strong>Control of Management System Documentation</strong><span>In-house certification</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Let's talk</h2>
+    <section id="contact" class="contact reveal">
+      <h2>Let's build something together</h2>
       <p>Open to product roles and collaborations in fintech and beyond.</p>
       <div class="hero-actions">
         <a class="button" href="mailto:nonsouzoma434@gmail.com">nonsouzoma434@gmail.com</a>
@@ -156,8 +232,6 @@
 
   <footer>© <span id="year"></span> Chukwunonso Uzoma</footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
